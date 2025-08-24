@@ -40,19 +40,19 @@
 </script>
 
 <div class="relative w-full">
-    <section id="about" class="flex flex-col-reverse md:flex-row items-center justify-center rounded-2xl shadow-lg p-10 max-w-4xl mx-auto my-20 min-h-[70vh]">
-        <div class="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left text-white">
-            <div class="h-10 mb-4">
-                <span class="green-gradient-text text-2xl md:text-3xl font-mono font-semibold">{currentTitle}</span><span class="text-green-400 animate-pulse">|</span>
+    <section id="about" class="flex flex-col-reverse md:flex-row items-center md:items-center justify-center rounded-2xl shadow-lg p-4 md:p-10 w-full md:max-w-4xl mx-auto my-20 min-h-[70vh]">
+        <div class="flex-1 flex flex-col justify-center items-start text-left">
+            <div class="h-10 mb-8 w-full flex items-center">
+                <span class="green-gradient-text text-lg md:text-3xl font-light">{currentTitle}</span><span class="text-green-400 animate-pulse ml-1">|</span>
             </div>
-            <p class="mb-6 max-w-2xl text-lg md:text-xl font-light leading-relaxed">
+            <p class="mb-6 max-w-2xl text-sm md:text-xl font-extralight leading-relaxed text-gray-300">
                 I’m a software engineer and researcher passionate about building intelligent, user-centered solutions. With a background in full-stack development and applied machine learning, I enjoy exploring how artificial intelligence can be leveraged to solve real-world problems.
             </p>
 
-            <p class="mb-6 max-w-2xl text-lg md:text-xl font-light leading-relaxed">
+            <p class="mb-6 max-w-2xl text-sm md:text-xl font-extralight leading-relaxed text-gray-300">
                 My work spans across designing iOS applications for accessibility, developing scalable IoT systems on AWS, and building AI models for computer vision and natural data classification. 
             </p>
-            <p class="mb-6 max-w-2xl text-lg md:text-xl font-light leading-relaxed">
+            <p class="mb-6 max-w-2xl text-sm md:text-xl font-extralight leading-relaxed text-gray-300">
                 I thrive at the intersection of software engineering and AI: translating complex data into actionable, meaningful applications. Whether it’s deploying cloud-based systems, training neural networks, or prototyping accessible mobile apps, I’m driven by curiosity and a commitment to developing solutions that make an impact.       
             </p>
         </div>
