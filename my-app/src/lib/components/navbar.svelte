@@ -2,27 +2,24 @@
     let isOpen = false; // for mobile menu toggle
 </script>
 
-<nav class="fixed top-0 w-full bg-[rgba(10,10,10,0.95)] backdrop-blur-md shadow-sm z-50">
+<navbar class="fixed top-0 w-full bg-[#1a1a1a] shadow-sm z-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
+        <div class="flex justify-between items-center py-4">
         
         <!-- Title-->
-        <div class="flex-shrink-0 text-2xl font-bold text-green-400 mr-8">
+        <div class="title flex-shrink-0 text-2xl font-bold mr-70">
             YASMINE SUBBAGH
         </div>
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex md:space-x-6">
-            <a href="/" class="hover:text-green-700">About</a>
-            <a href="/experience" class="hover:text-green-700">Experience</a>
-            <a href="/projects" class="hover:text-green-700">Projects</a>
-            <a href="/skills" class="hover:text-green-700">Skills</a>
-            <a href="/education" class="hover:text-green-700">Education</a>
-            <a href="/contact" class="hover:text-green-700">Contact</a>
-            <a href="/yasmine_subbagh_full_resume.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-green-700">
-                Resume
-            </a>
-
+            <a href="/" class="nav-link">About</a>
+            <a href="/experience" class="nav-link">Experience</a>
+            <a href="/projects" class="nav-link">Projects</a>
+            <a href="/skills" class="nav-link">Skills</a>
+            <a href="/education" class="nav-link">Education</a>
+            <a href="/contact" class="nav-link">Contact</a>
+            <a href="/yasmine_subbagh_full_resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -39,35 +36,37 @@
 
   <!-- Mobile Menu Dropdown -->
     {#if isOpen}
-        <div class="md:hidden bg-[rgba(10,10,10,0.95)] shadow-lg">
+        <div class="md:hidden bg-[#1a1a1a] shadow-lg">
             <a href="/" class="block px-4 py-2 hover:bg-green-50">About</a>
             <a href="/experience" class="block px-4 py-2 hover:bg-green-50">Experience</a>
             <a href="/projects" class="block px-4 py-2 hover:bg-green-50">Projects</a>
             <a href="/skills" class="block px-4 py-2 hover:bg-green-50">Skills</a>
             <a href="/education" class="block px-4 py-2 hover:bg-green-50">Education</a>
             <a href="/contact" class="block px-4 py-2 hover:bg-green-50">Contact</a>
-            <a href="/resume" class="block px-4 py-2 hover:bg-green-50">Resume</a>
+            <a href="/yasmine_subbagh_full_resume.pdf" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 hover:bg-green-50">Resume</a>
         </div>
     {/if}
-</nav>
-
+</navbar>
 
 
 <style>
-/* Navbar styling with opacity */
-nav {
-  background-color:rgba(10, 10, 10, 0.95); /* dark grey with 90% opacity */
-  color: #ffffff; /* readable text */
+/* Navbar styling */
+.title {
+  color: rgb(115, 134, 120);
+}
+
+navbar {
+  background-color: #1a1a1a;
+  color: #ffffff; 
   display: flex;
-  backdrop-filter: blur(5px); /* subtle blur behind the navbar */
 }
 
 /* Navbar links */
-nav a {
+.nav-link {
   text-decoration: none;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.nav-link:hover {
+  color: rgb(115, 134, 120);
 }
 </style>

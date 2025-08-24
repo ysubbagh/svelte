@@ -3,8 +3,12 @@
 @plugin '@tailwindcss/typography';
 
 /* Global styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 main {
-  background-color: rgba(10, 10, 10, 0.95); /* dark grey */
+  background-color: #1a1a1a; /* off black */
   color: #ffffff; /* readable text */
   min-height: 100vh; /* full viewport height */
   padding: 2rem;
