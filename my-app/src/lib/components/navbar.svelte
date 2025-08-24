@@ -19,7 +19,10 @@
             <a href="/skills" class="hover:text-green-700">Skills</a>
             <a href="/education" class="hover:text-green-700">Education</a>
             <a href="/contact" class="hover:text-green-700">Contact</a>
-            <a href="/resume" class="hover:text-green-700">Resume</a>
+            <a href="/yasmine_subbagh_full_resume.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-green-700">
+                Resume
+            </a>
+
         </div>
 
         <!-- Mobile Menu Button -->
