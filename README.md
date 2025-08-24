@@ -14,6 +14,7 @@ This is a personal portfolio website of Yasmine Subbagh built with SvelteKit to 
 ## Technologies Used
 
 - TypesriptJS
+- JavaScipt
 - SvelteKit
 - CSS3
 - Vercel for hosting and CI/CD

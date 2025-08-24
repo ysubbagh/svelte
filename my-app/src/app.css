@@ -1,3 +1,13 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+/* Global styles */
+main {
+  background-color: rgba(10, 10, 10, 0.95); /* dark grey */
+  color: #ffffff; /* readable text */
+  min-height: 100vh; /* full viewport height */
+  padding: 2rem;
+  display: flex;
+  gap: 2rem; /* space between columns */
+}
