@@ -1,11 +1,13 @@
-<script>
-  import Hero from '$lib/components/Hero.svelte';
+<script lang="ts">
+  import Hero from '$lib/components/hero.svelte';
+  import About from '$lib/components/about.svelte';
+  import '../app.css';
 </script>
 
-<Hero />
+<!-- <Hero /> -->
 
 <section id="about">
-  <!-- <About /> -->
+  <About />
 </section>
 
 <section id="experience">

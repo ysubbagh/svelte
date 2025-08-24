@@ -5,6 +5,22 @@
 /* Global styles */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 200px;
+  width: 100vw;
+  background: url('/mountains.svg') bottom center no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
 }
 
 main {

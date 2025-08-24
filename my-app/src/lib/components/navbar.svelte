@@ -43,9 +43,9 @@
         <div class="flex justify-between items-center py-4">
         
         <!-- Title-->
-        <div class="title flex-shrink-0 text-2xl font-bold mr-70">
+        <a href="#" class="title flex-shrink-0 text-2xl font-bold mr-70" style="text-decoration: none;">
             YASMINE SUBBAGH
-        </div>
+        </a>
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex md:space-x-6">
@@ -117,6 +117,6 @@ navbar {
 .mobile-nav-link:hover,
 .mobile-nav-link:focus {
   background: rgb(115, 134, 120);
-  color: #fff; /* Ensure text remains white on hover/focus */
+  color: #fff; 
 }
 </style>
