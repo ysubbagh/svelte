@@ -7,11 +7,11 @@
 
     <!-- Left: Title + Body -->
     <div>
-        <h2 class="text-xl font-bold mb-2">Yasmine Subbagh</h2>
-        <p class="text-sm text-gray-300">
+        <h2 class="text-lg font-bold mb-2">Yasmine Subbagh</h2>
+        <p class="text-xs text-gray-300">
             Software Engineer 
         </p>
-        <p class="text-sm text-gray-300">
+        <p class="text-xs text-gray-300">
             I love building digital experiences and learning new things.  
         </p>
         <p class="mt-4 text-xs text-gray-400">© {year} All rights reserved.</p>
@@ -19,16 +19,16 @@
 
     <!-- Middle: Nav Links -->
     <div class="flex flex-col space-y-2 pl-8">
-        <h2 class="text-xl font-bold mb-2">Links</h2>
-        <a href="/" class="hover:text-gray-400">About</a>
-        <a href="/experience" class="hover:text-gray-400">Experience</a>
-        <a href="/projects" class="hover:text-gray-400">Projects</a>
-        <a href="/skills" class="hover:text-gray-400">Skills</a>
+        <h2 class="text-lg font-bold mb-2">Links</h2>
+        <a href="/" class="text-sm hover:text-gray-400">About</a>
+        <a href="/experience" class="text-sm hover:text-gray-400">Experience</a>
+        <a href="/projects" class="text-sm hover:text-gray-400">Projects</a>
+        <a href="/skills" class="text-sm hover:text-gray-400">Skills</a>
     </div>
 
     <!-- Right: Contact Links -->
     <div class="flex flex-col md:items-end">
-        <h2 class="text-xl font-bold mb-2">Connect</h2>
+        <h2 class="text-lg font-bold mb-2">Connect</h2>
         <div class="flex space-x-4 mt-2">
         <!-- GitHub -->
         <a href="https://github.com/ysubbagh" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">

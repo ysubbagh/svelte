@@ -1,8 +1,44 @@
 <script>
+    import { onMount, onDestroy } from 'svelte';
+    import { browser } from '$app/environment';
+
     let isOpen = false; // for mobile menu toggle
+    let navbarElement; // Reference to the navbar element
+
+    function closeNavbar() {
+        isOpen = false;
+    }
+
+    function handleKeydown(event) {
+        if (event.key === 'Escape') {
+            closeNavbar();
+        }
+    }
+
+    function handleClickOutside(event) {
+        if (navbarElement && !navbarElement.contains(event.target)) {
+            closeNavbar();
+        }
+    }
+
+    // Add event listeners when the component is mounted
+    onMount(() => {
+        if (browser) {
+            document.addEventListener('keydown', handleKeydown);
+            document.addEventListener('click', handleClickOutside);
+        }
+    });
+
+    // Remove event listeners when the component is unmounted
+    onDestroy(() => {
+        if (browser) {
+            document.removeEventListener('keydown', handleKeydown);
+            document.removeEventListener('click', handleClickOutside);
+        }
+    });
 </script>
 
-<navbar class="fixed top-0 w-full bg-[#1a1a1a] shadow-sm z-50">
+<navbar bind:this={navbarElement} class="fixed top-0 w-full bg-[#1a1a1a] shadow-sm z-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center py-4">
         
@@ -23,7 +59,7 @@
         </div>
 
         <!-- Mobile Menu Button -->
-        <button class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+        <button class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 text-white bg-gray-700"
             on:click={() => (isOpen = !isOpen)}>
             {#if isOpen}
             ✖
@@ -36,14 +72,14 @@
 
   <!-- Mobile Menu Dropdown -->
     {#if isOpen}
-        <div class="md:hidden bg-[#1a1a1a] shadow-lg">
-            <a href="/" class="block px-4 py-2 hover:bg-green-50">About</a>
-            <a href="/experience" class="block px-4 py-2 hover:bg-green-50">Experience</a>
-            <a href="/projects" class="block px-4 py-2 hover:bg-green-50">Projects</a>
-            <a href="/skills" class="block px-4 py-2 hover:bg-green-50">Skills</a>
-            <a href="/education" class="block px-4 py-2 hover:bg-green-50">Education</a>
-            <a href="/contact" class="block px-4 py-2 hover:bg-green-50">Contact</a>
-            <a href="/yasmine_subbagh_full_resume.pdf" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 hover:bg-green-50">Resume</a>
+        <div class="md:hidden bg-[#1a1a1a] shadow-lg w-auto">
+            <a href="/" class="mobile-nav-link" on:click={() => (isOpen = false)}>About</a>
+            <a href="/experience" class="mobile-nav-link" on:click={() => (isOpen = false)}>Experience</a>
+            <a href="/projects" class="mobile-nav-link" on:click={() => (isOpen = false)}>Projects</a>
+            <a href="/skills" class="mobile-nav-link" on:click={() => (isOpen = false)}>Skills</a>
+            <a href="/education" class="mobile-nav-link" on:click={() => (isOpen = false)}>Education</a>
+            <a href="/contact" class="mobile-nav-link" on:click={() => (isOpen = false)}>Contact</a>
+            <a href="/yasmine_subbagh_full_resume.pdf" target="_blank" rel="noopener noreferrer" class="mobile-nav-link" on:click={() => (isOpen = false)}>Resume</a>
         </div>
     {/if}
 </navbar>
@@ -68,5 +104,17 @@ navbar {
 
 .nav-link:hover {
   color: rgb(115, 134, 120);
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 1rem 1rem 1rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.mobile-nav-link:hover {
+  background: rgb(115, 134, 120);
 }
 </style>
