@@ -2,6 +2,7 @@
   import Hero from '$lib/components/hero.svelte';
   import About from '$lib/components/about.svelte';
   import Education from '$lib/components/education.svelte';
+  import Skills from '$lib/components/skills.svelte';
   import '../app.css';
 </script>
 
@@ -24,7 +25,7 @@
   </section>
 
   <section id="skills">
-    <!-- <Skills /> -->
+    <Skills /> 
   </section>
 
   <section id="contact">

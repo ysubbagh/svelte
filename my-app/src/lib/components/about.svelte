@@ -3,8 +3,7 @@
   let titles = [
     'Software Engineer',
     'Full Stack Engineer',
-    'AI Engineer',
-    'Cloud Engineer'
+    'AI Engineer'
   ];
   let currentTitle = '';
   let titleIndex = 0;

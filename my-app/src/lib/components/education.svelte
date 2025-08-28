@@ -4,7 +4,7 @@
       degree: 'M.S. Computer Science and Software Engineering',
       institution: 'University of Washington',
       location: 'Bothell, WA',
-      duration: '2024 – 2026',
+      duration: '2024 – Present',
       gpa: 3.74,
       description: 'Relevant coursework: Machine Learning, Deep Learning, Internet of Things (IoT), Software Management.'
     },
@@ -32,7 +32,7 @@
           <span class="text-base md:text-lg font-light text-gray-400">{edu.institution}</span>
           <span class="text-sm md:text-base text-gray-400 mt-1 md:mt-0">{edu.location}</span>
         </div>
-        <div class="text-sm md:text-base text-gray-400 mb-1">GPA: {edu.gpa}</div>
+        <div class="text-sm md:text-base text-gray-400 mb-1">GPA: {edu.gpa} / 4.0</div>
         <div class="text-sm md:text-base text-gray-300">{edu.description}</div>
       </div>
     {/each}
