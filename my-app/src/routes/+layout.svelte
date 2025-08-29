@@ -4,13 +4,11 @@
 	import Navbar from '$lib/components/navbar.svelte';
   	import Footer from '$lib/components/footer.svelte';
 	
-	let { children } = $props();
-	injectSpeedInsights();
-	
-</script>
+		injectSpeedInsights();
+	</script>
 
-<Navbar />
-<main class="min-h-screen">
-  {@render children()} <!-- page content here -->
-</main>
-<Footer />
+	<Navbar />
+	<main class="min-h-screen">
+		<slot />
+	</main>
+	<Footer />

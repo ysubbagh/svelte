@@ -76,6 +76,7 @@
     "svelte"
   ],
   "dependencies": {
-    "@vercel/speed-insights": "^1.2.0"
+    "@vercel/speed-insights": "^1.2.0",
+    "resend": "^6.2.0-preview-contacts.0"
   }
 }

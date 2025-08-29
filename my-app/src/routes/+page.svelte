@@ -12,10 +12,6 @@
     <!-- <Hero /> -->
   </section>
 
-  <section id="education">
-    <Education /> 
-  </section>
-
   <section id="experience">
     <!-- <Experience /> -->
   </section>
@@ -28,7 +24,7 @@
     <Skills /> 
   </section>
 
-  <section id="contact">
-    <!-- <Contact /> -->
+  <section id="education">
+    <Education /> 
   </section>
 </main>
