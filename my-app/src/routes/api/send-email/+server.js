@@ -1,5 +1,4 @@
 // src/routes/api/send-email/+server.js
-
 import { Resend } from 'resend';
 import { RESEND_API_KEY } from '$env/static/private';
 import { json } from '@sveltejs/kit';
@@ -16,8 +15,8 @@ export async function POST({ request }) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: 'Contact Yasmine Subbagh <noreply@yasminesubbagh.com>',
-      to: ['ysubbagh@gmail.com'],
+      from: 'Portfolio Contact Message <noreply@yasminesubbagh.com>',
+      to: ['yasmine@yasminesubbagh.com'],
       subject: `New Message from ${name}`,
       html: `<div>
         <h1>Contact Form Submission</h1>

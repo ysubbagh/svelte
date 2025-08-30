@@ -43,12 +43,12 @@
         <div class="flex justify-between items-center py-4">
         
         <!-- Title-->
-    <a href="/" class="title flex-shrink-0 text-2xl font-bold mr-70" style="text-decoration: none;">
+    <a href="/" class="title flex-shrink-0 text-2xl font-bold mr-10" style="text-decoration: none;">
             YASMINE SUBBAGH
         </a>
 
         <!-- Desktop Menu -->
-        <div class="hidden md:flex md:space-x-6">
+        <div class="hidden md:flex md:space-x-6 ml-60">
             <a href="/#about" class="nav-link">About</a>
             <a href="/#experience" class="nav-link">Experience</a>
             <a href="/#projects" class="nav-link">Projects</a>
@@ -59,7 +59,7 @@
         </div>
 
         <!-- Mobile Menu Button -->
-        <button class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 text-white bg-[rgb(115,134,120)]"
+    <button class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 text-white bg-[rgb(115,134,120)]"
             on:click={() => (isOpen = !isOpen)}>
             {#if isOpen}
             ✖
