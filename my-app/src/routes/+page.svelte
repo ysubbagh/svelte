@@ -3,6 +3,7 @@
   import About from '$lib/components/about.svelte';
   import Education from '$lib/components/education.svelte';
   import Skills from '$lib/components/skills.svelte';
+  import Experience from '$lib/components/experience.svelte';
   import '../app.css';
 </script>
 
@@ -13,7 +14,7 @@
   </section>
 
   <section id="experience">
-    <!-- <Experience /> -->
+    <Experience />
   </section>
 
   <section id="projects">
