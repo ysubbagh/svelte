@@ -23,7 +23,7 @@
   <h2 class="text-2xl md:text-3xl font-semibold mb-8 text-white text-center">Education</h2>
   <div class="flex flex-col gap-6">
     {#each education as edu}
-      <div class="w-full bg-[#232323] rounded-xl shadow-md p-6 border border-[rgb(115,134,120)] text-gray-300 mx-auto flex items-center gap-4">
+  <div class="w-full bg-[#232323] rounded-xl shadow-md p-6 border border-white/10 hover:border-[rgb(115,134,120)] transition text-gray-300 mx-auto flex items-center gap-4">
         <img src="/logos/uw.png" alt="UW Logo" class="hidden md:block w-30 h-30 object-contain rounded-lg p-2 shadow-md" />
         <div class="flex-1">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">

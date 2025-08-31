@@ -6,6 +6,7 @@
         'Python': '/logos/langs/python.svg',
         'Java': '/logos/langs/java.png',
         'Swift': '/logos/langs/swift.svg',
+        'Cuda': '/logos/langs/cuda.svg',
         'Bash': '/logos/langs/bash.png',
         'ARM Assembly': '/logos/langs/arm.png',
         'Motorola 68000 Assembly': '/logos/langs/68k.png',
@@ -33,6 +34,7 @@
         'PostgreSQL': '/logos/cloud/postsql.png',
         'Vercel': '/logos/cloud/vercel.png',
         'DynamoDB': '/logos/cloud/ddb.png',
+        'Supabase': 'logos/cloud/supabase.png',
         // ML/Data
         'TensorFlow': '/logos/ml/tf.png',
         'PyTorch': '/logos/ml/py.png',
@@ -47,7 +49,7 @@
         // Dev Tools
         'Visual Studio Code': '/logos/dev/vsc.png',
         'Figma': '/logos/dev/figma.png',
-        'Quatrics': '/logos/dev/qual.png',
+        'Qualtrics': '/logos/dev/qual.png',
         'ArcGIS Pro': '/logos/dev/gis.png',
         'LaTeX': '/logos/dev/latex.png',
     };
@@ -55,7 +57,7 @@
     export let skills = [
         {
             category: 'Programming Languages',
-            items: ['C', 'C++', 'Python', 'Java', 'Swift', 'Bash', 'ARM Assembly', 'Motorola 68000 Assembly', 'MATLAB', 'Arduino']
+            items: ['C', 'C++', 'Python', 'Java', 'Swift', 'Cuda', 'Bash', 'ARM Assembly', 'Motorola 68000 Assembly', 'MATLAB', 'Arduino']
         },
         {
             category: 'Web Development',
@@ -63,7 +65,7 @@
         },
         {
             category: 'Cloud, DevOps, & Databases',
-            items: ['AWS', 'Azure', 'Vercel', 'Docker', 'Git', 'MySQL', 'PostgreSQL', 'DynamoDB']
+            items: ['AWS', 'Azure', 'Vercel', 'Docker', 'Git', 'MySQL', 'PostgreSQL', 'DynamoDB', 'Supabase']
         },
         {
             category: 'Machine Learning & Data Science',
@@ -71,7 +73,7 @@
         },
         {
             category: 'Development Tools',
-            items: ['Visual Studio Code', 'Figma', 'Quatrics', 'ArcGIS Pro', 'LaTeX']
+            items: ['Visual Studio Code', 'Figma', 'Qualtrics', 'ArcGIS Pro', 'LaTeX']
         }
     ];
 
@@ -82,7 +84,7 @@
     <h2 class="text-2xl md:text-3xl font-semibold mb-10 text-white text-center">Skills</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center">
         {#each skills as skill, i}
-            <div class="w-full max-w-3xl bg-[#232323] border border-[rgb(115,134,120)] rounded-2xl shadow-md flex flex-col items-center py-7 px-4 {i === 4 ? 'md:col-span-2 mx-auto' : ''}">
+            <div class="w-full max-w-3xl bg-[#232323] border border-white/10 hover:border-[rgb(115,134,120)] transition rounded-2xl shadow-md flex flex-col items-center py-7 px-4 {i === 4 ? 'md:col-span-2 mx-auto' : ''}">
                 <span class="text-lg md:text-xl font-semibold text-gray-200 mb-3 tracking-wide">{skill.category}</span>
                 <ul class="flex flex-wrap gap-3 justify-center">
                 {#each skill.items as item}

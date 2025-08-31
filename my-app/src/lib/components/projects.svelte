@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
   export let projects = [
     {
       title: "Portfolio Website",
       description: "A personal portfolio built with SvelteKit and Tailwind CSS, featuring responsive design and dynamic content.",
-      tech: ["SvelteKit", "Tailwind CSS", "Vercel", "HTML", "CSS", "JavaScript"],
+      tech: ["SvelteKit", "Tailwind CSS", "Vercel", "HTML", "CSS", "JavaScript", "TypeScript"],
       details: "Developed a modern, responsive personal portfolio website using SvelteKit and Tailwind CSS. The site features dynamic content sections for projects, skills, education, and experience, with accessible modal dialogs and interactive UI components. Integrated custom branding, optimized for performance and accessibility, and deployed to Vercel for fast, reliable delivery.",
       github: "https://github.com/ysubbagh/svelte",
       demo: "https://yasminesubbagh.com"
@@ -11,33 +11,72 @@
     {
       title: "AI Fungi Identifier",
       description: "Enchancing Mushroom Safety through Backprogated Multi-Layer Perceptron Neural Network Identification",
-      tech: ["Scikit-learn", "NumPy", "Seaborn", "Matplotlib", "Pandas"],
+      tech: ["Python", "Scikit-learn", "NumPy", "Seaborn", "Matplotlib", "Pandas"],
       details: [
         "Developed a classifier for wild mushroom edibility with 99.98% accuracy using a backpropagated multi -layer perceptron implemented from scratch in NumPy, trained on 69,000+ samples.",
         "Engineered features from two datasets and applied principal component analysis (PCA) and random forest feature importance rankings to validate data separability and ensure high-quality model input.",
         "Implemented a full ML pipeline in Python, including data preprocessing, analysis, training, and evaluation, focused on preventing overfitting and ensuring model reliability."
       ],
       github: "https://github.com/ysubbagh/581-final/blob/main/notebook.ipynb",
-      paper: "https://github.com/ysubbagh/581-final/blob/main/report.pdf"
+      paper: "/docs/fatal_fungi.pdf"
     },
     {
       title: "IoT Water Monitor",
-      description: "Enchancing Mushroom Safety through Backprogated Multi-Layer Perceptron Neural Network Identification",
-      tech: ["AWS", "Flask", "Arduino", "EC2", "DynamoDB", "IoT Core", "Lambda","API Gateway"],
+      description: "Remote monitoring system for residential rainwater harvesting tanks, aimed at improving water management for home gardeners.",
+      tech: ["AWS", "Python", "Flask", "Arduino", "EC2", "DynamoDB", "IoT Core", "Lambda","API Gateway"],
       details: [
         "Designed and built an end-to-end IoT system to solve a real personal problem: tracking rainwater levels in outdoor storage tanks to reduce household utility costs.",
         "Built a scalable AWS pipeline: IoT Core for message ingestion, DynamoDB for storage, and Lambda/API Gateway to expose RESTful endpoints.",
         "Developed a responsive Flask web app hosted on EC2 for real-time data visualization and user management, with automated threshold-based alerts via email."
       ],
       github: "https://github.com/ysubbagh/532-final",
-      paper: "https://github.com/ysubbagh/532-final/blob/main/finalpaper_Y_Subbagh.pdf"
+      paper: "/docs/smart_yard.pdf"
+    },
+    {
+      title: "AI Vehicle Detection",
+      description: "A comparative study of deep learning models for vehicle detection and segmentation, analyzing trade-offs between accuracy and inference speed.",
+      tech: ["Python", "TensorFlow", "Dectron2"],
+      details: [
+        "Fine-tuned a Mask RCNN with Stanford Cars and COCO subset dataset to detect and segment vehicles in traffic scenes.",
+        "Evaluated performance, inference speed, and application suitability by comparing the 2-stage model to a 1-stage models and a hybrid ensemble (Faster R-CNN + YOLOv5), analyzing mAP and resource trade-offs across scenarios such as real-time inference vs. high-precision annotation."
+      ],
+      paper: "/docs/object_detection.pdf"
+    },
+    {
+      title: "Inverse Assembler",
+      description: "A command-line disassembler built from scratch in 68K Assembly to translate machine code into human-readable instructions.",
+      tech: ["ARM Assembly", "68K Assembly", "EASy68K"],
+      details: [
+        "Built a command-line assembly disassembler in Motorola 680000 Assembly translating binary machine code into human-readable assembly instructions with support for advanced opcode parsing."
+      ],
+      github: "https://github.com/ysubbagh/68Kdissasembler",
+    },
+    {
+      title: "Image Deep Learning",
+      description: "A Convolutional Neural Network in MATLAB for ASL letter classification, achieving 2nd place in a Kaggle competition.",
+      tech: ["MATLAB"],
+      details: [
+        "Designed, implemented, and trained a convolutional neural network in MATLAB to correctly classify American Sign Language (ASL) MNIST image data.",
+        "Improved model accuracy by 61% through data preprocessing and hyperparameter tuning, earning 2nd place in a Kaggle competition.",
+      ],
+      github: "https://github.com/TheGortDragon/css-485-group-7-final-project",
     }
   ];
 
-  let showModal = false;
-  let modalProject = null;
+  interface Project {
+    title: string;
+    description: string;
+    tech: string[];
+    details: string | string[];
+    github?: string;
+    demo?: string;
+    paper?: string;
+  }
 
-  function openModal(project) {
+  let showModal = false;
+  let modalProject: Project | null = null;
+
+  function openModal(project: Project) {
     modalProject = project;
     showModal = true;
   }
@@ -46,26 +85,20 @@
     modalProject = null;
   }
 
-  function handleBackdropClick(e) {
-    if (e.target.classList.contains('modal-backdrop')) {
+  function handleBackdropKeydown(e: KeyboardEvent) {
+    if (e.key === 'Enter' || e.key === ' ') {
       closeModal();
     }
   }
 
-  function handleKeydown(e) {
-    if (e.key === 'Escape') {
+  function handleKeydown(e: KeyboardEvent) {
+    if (showModal && e.key === 'Escape') {
       closeModal();
-    }
-  }
-
-  $: {
-    if (showModal) {
-      window.addEventListener('keydown', handleKeydown);
-    } else {
-      window.removeEventListener('keydown', handleKeydown);
     }
   }
 </script>
+
+<svelte:window on:keydown={handleKeydown} />
 
 <section class="w-full max-w-5xl mx-auto my-16 px-2 font-[Inter,sans-serif]">
   <h2 class="text-2xl md:text-3xl font-semibold mb-8 text-white text-center">Projects</h2>
@@ -98,7 +131,7 @@
           {/if}
           {#if project.paper}
             <a href={project.paper} target="_blank" rel="noopener" class="flex items-center gap-2 bg-[rgb(115,134,120)] hover:bg-white hover:text-[rgb(115,134,120)] text-white px-3 py-1 rounded-full text-sm font-semibold border border-[rgb(115,134,120)] transition">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m5-3h3m0 0v3m0-3-9 9"/></svg>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
               Paper
             </a>
           {/if}
@@ -107,7 +140,7 @@
     {/each}
 
     {#if showModal && modalProject}
-      <div class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm focus:outline-none" role="dialog" aria-modal="true" aria-label="Project details dialog. Press Escape to close." tabindex="0" on:click={handleBackdropClick} on:keydown={handleKeydown}>
+      <div class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm focus:outline-none" role="dialog" aria-modal="true" aria-label="Project details dialog. Press Escape to close." tabindex="0" on:click={closeModal} on:keydown={handleBackdropKeydown}>
         <div class="modal-content bg-[#232323] rounded-xl shadow-2xl p-8 max-w-lg w-full relative animate-fadein" role="document" on:click|stopPropagation>
           <button class="absolute top-4 right-4 text-white bg-[rgb(115,134,120)] hover:bg-white hover:text-[rgb(115,134,120)] rounded-full px-3 py-1 text-xs font-semibold border border-[rgb(115,134,120)] transition" on:click={closeModal} aria-label="Close project details dialog">Close</button>
           <h3 class="text-2xl font-bold mb-2 text-white">{modalProject.title}</h3>
@@ -143,7 +176,7 @@
             {/if}
             {#if modalProject.paper}
               <a href={modalProject.paper} target="_blank" rel="noopener" class="flex items-center gap-2 bg-[rgb(115,134,120)] hover:bg-white hover:text-[rgb(115,134,120)] text-white px-3 py-1 rounded-full text-sm font-semibold border border-[rgb(115,134,120)] transition">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m5-3h3m0 0v3m0-3-9 9"/></svg>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                 Paper
               </a>
             {/if}

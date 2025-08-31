@@ -79,7 +79,7 @@
             <a href="/#skills" class="mobile-nav-link" on:click={() => (isOpen = false)}>Skills</a>
             <a href="/#education" class="mobile-nav-link" on:click={() => (isOpen = false)}>Education</a>
             <a href="/contact" class="mobile-nav-link" on:click={() => (isOpen = false)}>Contact</a>
-            <a href="/yasmine_subbagh_full_resume.pdf" target="_blank" rel="noopener noreferrer" class="mobile-nav-link" on:click={() => (isOpen = false)}>Resume</a>
+            <a href="/docs/yasmine_subbagh_full_resume.pdf" target="_blank" rel="noopener noreferrer" class="mobile-nav-link" on:click={() => (isOpen = false)}>Resume</a>
         </div>
     {/if}
 </navbar>
@@ -88,7 +88,7 @@
 <style>
     /* Navbar styling */
     .title {
-        color: rgb(115, 134, 120);
+        color: rgb(115,134,120);
     }
 
     navbar {
