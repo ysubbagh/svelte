@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Hero from '$lib/components/hero.svelte';
   import About from '$lib/components/about.svelte';
   import Education from '$lib/components/education.svelte';
   import Skills from '$lib/components/skills.svelte';
@@ -11,7 +10,6 @@
 <main class="flex flex-col gap-0">
   <section id="about">
     <About />
-    <!-- <Hero /> -->
   </section>
 
   <section id="experience">

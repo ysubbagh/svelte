@@ -84,7 +84,6 @@
     {/if}
 </navbar>
 
-
 <style>
     /* Navbar styling */
     .title {
