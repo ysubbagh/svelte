@@ -55,7 +55,7 @@
             <a href="/#skills" class="nav-link">Skills</a>
             <a href="/#education" class="nav-link">Education</a>
             <a href="/contact" class="nav-link">Contact</a>
-            <a href="/yasmine_subbagh_full_resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a>
+            <a href="/docs/yasmine_subbagh_full_resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">Resume</a>
         </div>
 
         <!-- Mobile Menu Button -->
