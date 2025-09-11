@@ -1,11 +1,23 @@
 <script>
     export let experiences = [
         {
+            company: "Stoke Space",
+            logo: "/logos/stoke.png",
+            website: "https://www.stokespace.com/",
+            title: "Software Engineer Intern",
+            location: "Kent, WA",
+            period: "September 2025 – Present",
+            description: [
+
+            ]
+        },
+        {
             company: "UWB IDEA Lab",
-            logo: "/logos/idea.png", 
+            logo: "/logos/idea.png",
+            website: null,
             title: "Full Stack iOS Engineer / Research Assistant",
             location: "Bothell, WA",
-            period: "March 2024 – Present",
+            period: "March 2024 – January 2025",
             description: [
                 "Led the end-to-end design and prototyping of an iOS communication app in Swift for non-verbal children that require speech assistance.",
                 "Lead user requirement gathering with PMs and Speech Pathologists to design the back-end SQLite database to support personalized communication workflows for various use-cases."
@@ -13,7 +25,8 @@
         },
         {
             company: "OneRadio Corp",
-            logo: "/logos/oneradio.png", 
+            logo: "/logos/oneradio.png",
+            website: "http://www.oneradiocorp.com", 
             title: "Software Engineer Intern",
             location: "Seattle, WA",
             period: "June 2024 – September 2024",
@@ -26,6 +39,7 @@
         {
             company: "OneRadio Corp",
             logo: "/logos/oneradio.png",
+            website: "http://www.oneradiocorp.com", 
             title: "Software Engineer Intern",
             location: "Seattle, WA",
             period: "June 2023 – September 2023",
@@ -51,11 +65,17 @@
                             <div class="w-full">
                                 <div class="job-title">{exp.title}</div>
                                 <div class="flex flex-row flex-wrap items-center justify-between w-full">
-                                        <div class="company-name-location">
-                                            <span class="company-name">{exp.company}</span>
-                                            <span class="location">{exp.location}</span>
-                                        </div>
-                                        <div class="period period-right">{exp.period}</div>
+                                    <div class="company-name-location">
+                                        {#if exp.website}
+                                            <a href={exp.website} target="_blank" rel="noopener noreferrer" class="company-name">
+                                                {exp.company}
+                                            </a>
+                                        {:else}
+                                            <span class="company-name no-link">{exp.company}</span>
+                                        {/if}
+                                        <span class="location">{exp.location}</span>
+                                    </div>
+                                    <div class="period period-right">{exp.period}</div>
                                 </div>
                             </div>
                     </div>
@@ -130,6 +150,16 @@
         color: rgb(115,134,120);
         font-weight: 500;
         display: inline;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    .company-name:hover {
+        color: #a3c1a8;
+        text-decoration: underline;
+    }
+    .company-name.no-link:hover {
+        color: inherit;
+        text-decoration: none;
     }
     .location {
         font-size: 0.95rem;
