@@ -24,7 +24,7 @@
             ]
         },
         {
-            company: "OneRadio Corp",
+            company: "OneRadio Corp.",
             logo: "/logos/oneradio.png",
             website: "http://www.oneradiocorp.com", 
             title: "Software Engineer Intern",
@@ -37,7 +37,7 @@
             ]
         },
         {
-            company: "OneRadio Corp",
+            company: "OneRadio Corp.",
             logo: "/logos/oneradio.png",
             website: "http://www.oneradiocorp.com", 
             title: "Software Engineer Intern",
