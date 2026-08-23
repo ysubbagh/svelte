@@ -39,16 +39,16 @@
 </script>
 
 <navbar bind:this={navbarElement} class="fixed top-0 w-full bg-[#1a1a1a] shadow-sm z-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center py-4">
         
         <!-- Title-->
-    <a href="/" class="title flex-shrink-0 text-2xl font-bold mr-10" style="text-decoration: none;">
+    <a href="/" class="title flex-shrink-0 text-2xl font-bold" style="text-decoration: none;">
             YASMINE SUBBAGH
         </a>
 
         <!-- Desktop Menu -->
-        <div class="hidden md:flex md:space-x-6 ml-60">
+        <div class="hidden lg:flex lg:space-x-6">
             <a href="/#about" class="nav-link">About</a>
             <a href="/#experience" class="nav-link">Experience</a>
             <a href="/#projects" class="nav-link">Projects</a>
@@ -59,7 +59,7 @@
         </div>
 
         <!-- Mobile Menu Button -->
-    <button class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 text-white bg-[rgb(115,134,120)]"
+    <button class="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 text-white bg-[rgb(115,134,120)]"
             on:click={() => (isOpen = !isOpen)}>
             {#if isOpen}
             ✖
@@ -72,7 +72,7 @@
 
   <!-- Mobile Menu Dropdown -->
     {#if isOpen}
-        <div class="md:hidden bg-[#1a1a1a] shadow-lg w-auto absolute right-0 mt-2 mr-4">
+        <div class="lg:hidden bg-[#1a1a1a] shadow-lg w-auto absolute right-0 mt-2 mr-4">
             <a href="/#about" class="mobile-nav-link" on:click={() => (isOpen = false)}>About</a>
             <a href="/#experience" class="mobile-nav-link" on:click={() => (isOpen = false)}>Experience</a>
             <a href="/#projects" class="mobile-nav-link" on:click={() => (isOpen = false)}>Projects</a>
@@ -91,9 +91,9 @@
     }
 
     navbar {
+        display: block;
         background-color: #1a1a1a;
-        color: #ffffff; 
-        display: flex;
+        color: #ffffff;
     }
 
     /* Navbar links */

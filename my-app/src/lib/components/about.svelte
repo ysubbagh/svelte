@@ -49,14 +49,14 @@
       </p>
 
       <p class="mb-6 max-w-2xl text-sm md:text-xl font-extralight leading-relaxed text-gray-300">
-        My work spans across designing iOS applications for accessibility, developing scalable IoT systems on AWS, and building AI models for computer vision and natural data classification. 
+        At Stoke Space I build manufacturing software on Boltline. My work also spans designing iOS applications for accessibility, developing scalable IoT systems on AWS, and building AI models for computer vision and natural data classification. 
       </p>
       <p class="mb-6 max-w-2xl text-sm md:text-xl font-extralight leading-relaxed text-gray-300">
         I thrive at the intersection of software engineering and AI: translating complex data into actionable, meaningful applications. Whether it’s deploying cloud-based systems, training neural networks, or prototyping accessible mobile apps, I’m driven by curiosity and a commitment to developing solutions that make an impact.       
       </p>
     </div>
   <div class="hidden md:flex flex-col items-center justify-center mb-8 md:mb-0 md:ml-10">
-            <img src="/me.jpg" alt="Yasmine Subbagh" class="w-48 h-48 md:w-64 md:h-64 object-cover rounded-xl border-4 border-[rgb(115,134,120)] shadow-lg mb-4 bg-[#232323]" loading="lazy" />
+            <img src="/meJp.JPG" alt="Yasmine Subbagh" class="w-48 h-48 md:w-64 md:h-64 object-cover rounded-xl border-4 border-[rgb(115,134,120)] shadow-lg mb-4 bg-[#232323]" loading="lazy" />
       <div class="flex gap-4 mt-2">
         <a href="mailto:ysubbagh@gmail.com" target="_blank" rel="noopener" aria-label="Email" class="text-[rgb(115,134,120)] hover:text-white bg-white/10 hover:bg-[rgb(115,134,120)] rounded-full p-2 transition border border-[rgb(115,134,120)]">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 12l-4 4-4-4m8-4H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2z"/></svg>

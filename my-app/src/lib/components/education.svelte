@@ -4,7 +4,7 @@
       degree: 'M.S. Computer Science and Software Engineering',
       institution: 'University of Washington',
       location: 'Bothell, WA',
-      duration: '2024 – Present',
+      duration: '2024 – Expected 2027',
       gpa: 3.74,
       description: 'Relevant coursework: Machine Learning, Deep Learning, Internet of Things (IoT), Software Management.'
     },
@@ -26,9 +26,9 @@
   <div class="w-full bg-[#232323] rounded-xl shadow-md p-6 border border-white/10 hover:border-[rgb(115,134,120)] transition text-gray-300 mx-auto flex items-center gap-4">
         <img src="/logos/uw.png" alt="UW Logo" class="hidden md:block w-30 h-30 object-contain rounded-lg p-2 shadow-md" />
         <div class="flex-1">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-2">
             <span class="text-lg md:text-xl font-medium text-white">{edu.degree}</span>
-            <span class="text-sm md:text-base text-gray-400 mt-1 md:mt-0">{edu.duration}</span>
+            <span class="text-sm md:text-base text-gray-400 mt-1 lg:mt-0 shrink-0 whitespace-nowrap">{edu.duration}</span>
           </div>
           <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-1">
             <span class="text-base md:text-lg font-light" style="color:rgb(115,134,120)">{edu.institution}</span>

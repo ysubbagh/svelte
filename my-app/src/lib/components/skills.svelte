@@ -12,6 +12,7 @@
         'Motorola 68000 Assembly': '/logos/langs/68k.png',
         'MATLAB': '/logos/langs/matlab.png',
         'Arduino': '/logos/langs/arduino.png',
+        'SQL': '/logos/langs/sql.jpeg',
         // Web
         'JavaScript': '/logos/web/js.png',
         'TypeScript': '/logos/web/ts.svg',
@@ -19,6 +20,7 @@
         'CSS': '/logos/web/css.png',
         'RESTful APIs': '/logos/web/rest.svg',
         'Svelte': '/logos/web/svelte.png',
+        'Vite': '/logos/web/vite.jpeg',
         'Flask': '/logos/web/flask.png',
         'React': '/logos/web/react.png',
         'Next.js': '/logos/web/next.svg',
@@ -35,6 +37,9 @@
         'Vercel': '/logos/cloud/vercel.png',
         'DynamoDB': '/logos/cloud/ddb.png',
         'Supabase': 'logos/cloud/supabase.png',
+        'Temporal': '/logos/cloud/temporal.png.avif',
+        'GitHub Actions': '/logos/cloud/githubActions.png',
+        'DataDog': '/logos/cloud/datadog.png',
         // ML/Data
         'TensorFlow': '/logos/ml/tf.png',
         'PyTorch': '/logos/ml/py.png',
@@ -46,6 +51,7 @@
         'Seaborn': '/logos/ml/seaborn.svg',
         'Matplotlib': '/logos/ml/matplot.png',
         'Google Gemini API': '/logos/ml/gemini.png',
+        'Claude API': '/logos/ml/claude.png',
         // Dev Tools
         'Visual Studio Code': '/logos/dev/vsc.png',
         'Figma': '/logos/dev/figma.png',
@@ -57,19 +63,19 @@
     export let skills = [
         {
             category: 'Programming Languages',
-            items: ['C', 'C++', 'Python', 'Java', 'Swift', 'Cuda', 'Bash', 'ARM Assembly', 'Motorola 68000 Assembly', 'MATLAB', 'Arduino']
+            items: ['C', 'C++', 'Python', 'Java', 'Swift', 'SQL', 'Cuda', 'Bash', 'ARM Assembly', 'Motorola 68000 Assembly', 'MATLAB', 'Arduino']
         },
         {
             category: 'Web Development',
-            items: ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'RESTful APIs', 'Svelte', 'Flask', 'React', 'Next.js', 'Node.js', 'Tailwind CSS', 'JSON']
+            items: ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'RESTful APIs', 'Svelte', 'Vite', 'Flask', 'React', 'Next.js', 'Node.js', 'Tailwind CSS', 'Bootstrap', 'JSON']
         },
         {
             category: 'Cloud, DevOps, & Databases',
-            items: ['AWS', 'Azure', 'Vercel', 'Docker', 'Git', 'MySQL', 'PostgreSQL', 'DynamoDB', 'Supabase']
+            items: ['AWS', 'Azure', 'Vercel', 'Docker', 'Git', 'GitHub Actions', 'Temporal', 'DataDog', 'MySQL', 'PostgreSQL', 'DynamoDB', 'Supabase']
         },
         {
             category: 'Machine Learning & Data Science',
-            items: ['TensorFlow', 'PyTorch', 'Keras', 'scikit-learn', 'Pandas', 'NumPy', 'NLTK', 'Seaborn', 'Matplotlib', 'Google Gemini API']
+            items: ['TensorFlow', 'PyTorch', 'Keras', 'scikit-learn', 'Pandas', 'NumPy', 'NLTK', 'Seaborn', 'Matplotlib', 'Google Gemini API', 'Claude API']
         },
         {
             category: 'Development Tools',

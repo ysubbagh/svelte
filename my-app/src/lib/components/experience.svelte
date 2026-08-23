@@ -4,29 +4,44 @@
             company: "Stoke Space",
             logo: "/logos/stoke.png",
             website: "https://www.stokespace.com/",
+            title: "Software Engineer",
+            location: "Kent, WA",
+            period: "February 2026 – Present",
+            description: [
+                "Led a year-long cutover of inventory auditing onto a single activity feed: closed logging gaps from 76% to 100%, backfilled ~1.75 million historical records with an idempotent dedupe Temporal pipeline, shipped who/when/where/what filters across 10+ surfaces, and removed dual writes from the hot path.",
+                "Built an evaluation harness for Claude-based matching of historical inventory events to existing activity rows, iterating prompts against labeled cases until match quality held while cutting token use by 37%.",
+                "Owned automatic percent complete for hardware build tasks. Cut Temporal fanout from O(N) to O(1) per work item after instrumenting the bottleneck in Datadog.",
+                "Sole engineer for customer-defined inventory flags. Users create custom issue tags and automation rules instead of single hardcoded defect tags, then see those tags on inventory in the build tracker.",
+                "Led 0-1 for manufacturing task scheduling. Turned a vague schedule ask into one model with a DAG and a Gantt, evaluated OSS graph and Gantt libraries vs building in-house, and built the end-to-end implementation.",
+                "Spearheaded and owned the development, deployment, and operation of a coffee chat bot that automatically pairs employees for weekly 1:1s. Scaled adoption to a company-wide 500+ users, plus additional sub-teams concurrently."
+            ]
+        },
+        {
+            company: "Stoke Space",
+            logo: "/logos/stoke.png",
+            website: "https://www.stokespace.com/",
             title: "Software Engineer Intern",
             location: "Kent, WA",
-            period: "September 2025 – Present",
+            period: "September 2025 – February 2026",
             description: [
-
             ]
         },
         {
             company: "UWB IDEA Lab",
             logo: "/logos/idea.png",
             website: null,
-            title: "Full Stack iOS Engineer / Research Assistant",
+            title: "Research Assistant (Lead Full Stack iOS Engineer)",
             location: "Bothell, WA",
             period: "March 2024 – January 2025",
             description: [
-                "Led the end-to-end design and prototyping of an iOS communication app in Swift for non-verbal children that require speech assistance.",
-                "Lead user requirement gathering with PMs and Speech Pathologists to design the back-end SQLite database to support personalized communication workflows for various use-cases."
+                "Directed the end-to-end design and prototyping of an iOS communication app in Swift for children with speech impediments.",
+                "Conducted user requirement gathering with PMs and Speech Pathologists to design the back-end SQLite database to support personalized communication workflows for various use-cases."
             ]
         },
         {
             company: "OneRadio Corp.",
             logo: "/logos/oneradio.png",
-            website: "http://www.oneradiocorp.com", 
+            website: "http://www.oneradiocorp.com",
             title: "Software Engineer Intern",
             location: "Seattle, WA",
             period: "June 2024 – September 2024",
@@ -39,7 +54,7 @@
         {
             company: "OneRadio Corp.",
             logo: "/logos/oneradio.png",
-            website: "http://www.oneradiocorp.com", 
+            website: "http://www.oneradiocorp.com",
             title: "Software Engineer Intern",
             location: "Seattle, WA",
             period: "June 2023 – September 2023",

@@ -1,12 +1,16 @@
 <script lang="ts">
   export let projects = [
     {
-      title: "Portfolio Website",
-      description: "A personal portfolio built with SvelteKit and Tailwind CSS, featuring responsive design and dynamic content.",
-      tech: ["SvelteKit", "Tailwind CSS", "Vercel", "HTML", "CSS", "JavaScript", "TypeScript"],
-      details: "Developed a modern, responsive personal portfolio website using SvelteKit and Tailwind CSS. The site features dynamic content sections for projects, skills, education, and experience, with accessible modal dialogs and interactive UI components. Integrated custom branding, optimized for performance and accessibility, and deployed to Vercel for fast, reliable delivery.",
-      github: "https://github.com/ysubbagh/svelte",
-      demo: "https://yasminesubbagh.com"
+      title: "ClosedSnow",
+      description: "A snow-forecasting web app for four Washington ski resorts, combining live weather, ops status, and avalanche danger in one dashboard.",
+      tech: ["PyTorch", "AWS Lambda", "PostgreSQL", "GitHub Actions", "Python", "REST APIs"],
+      details: [
+        "Built a snow-forecasting web app for four Washington ski resorts, combining live weather, ops status, and avalanche danger in one dashboard.",
+        "Integrated REST APIs (Synoptic, NOAA, OnTheSnow, NWAC) into an hourly GitHub Actions pipeline that calculates freezing level, runs inference on AWS Lambda, and writes results to Postgres.",
+        "Trained a PyTorch snow-water-equivalent model on 28 years of SNOTEL data, then containerized it and deployed it to Lambda to forecast snow at multiple elevations."
+      ],
+      github: "https://github.com/ysubbagh/closedSnow",
+      demo: "https://weather.yasminesubbagh.com"
     },
     {
       title: "AI Fungi Identifier",
@@ -22,7 +26,7 @@
     },
     {
       title: "IoT Water Monitor",
-      description: "Remote monitoring system for residential rainwater harvesting tanks, aimed at improving water management for home gardeners.",
+      description: "End-to-end IoT system tracking rainwater levels in outdoor storage tanks to reduce household utility costs.",
       tech: ["AWS", "Python", "Flask", "Arduino", "EC2", "DynamoDB", "IoT Core", "Lambda","API Gateway"],
       details: [
         "Designed and built an end-to-end IoT system to solve a real personal problem: tracking rainwater levels in outdoor storage tanks to reduce household utility costs.",
